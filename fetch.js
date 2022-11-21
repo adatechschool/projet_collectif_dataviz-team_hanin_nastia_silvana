@@ -16,6 +16,7 @@ fetch ('https://opendata.paris.fr/api/records/1.0/search/?dataset=que-faire-a-pa
     
 >>>>>>> 5d9f6f1957adac5e594b73bcf6015a24d6f69486
     // const h1 = document.getElementById ("Annee"); 
+    //
     
 
     //return donnees.map(function(a)) 
