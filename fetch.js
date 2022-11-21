@@ -6,7 +6,11 @@ fetch ('https://opendata.paris.fr/api/records/1.0/search/?dataset=que-faire-a-pa
     console.log(data.facet_groups[0].facets[1].name);
     let annee = data.facet_groups[0].facets[1].name;
     document.getElementById("Annee").innerHTML = annee;
-    
+    console.log(data.facet_groups[13].facets[0].name); 
+    let test = data.facet_groups[13].facets[0].name;
+    document.getElementById("Journée internationale").innerHTML = test;
+
+
     // const h1 = document.getElementById ("Annee"); 
     
 
