@@ -1,0 +1,40 @@
+html {
+    font-size: 15px; /* px signifie 'pixels': la taille de base pour la police est désormais 10 pixels de haut  */
+    font-family: 'Open Sans', sans-serif; /* cela devrait être le reste du résultat obtenu à partir de Google fonts */
+  }
+  h1 {
+    font-size: 35px;
+    text-align: center;
+  }
+  
+  p, li {
+    font-size: 14px;
+    line-height: 2;
+    letter-spacing: 1px;
+  }
+  html { /* Changer la couleur de la page */
+    background-color: #C5E0FB;
+  }
+body { /* Mettre en forme le corps de page */
+  width: 900px;
+  margin: 0 auto;
+  background-color: #C5E0FB;
+  padding: 0 20px 20px 20px;
+  
+}
+h1 { /* Positionner le titre et le mettre en forme*/ 
+    margin: 0;
+    padding: 20px 0;
+    color: #00539F;
+   
+  }
+  
+  img { /* Centrer l'image */ 
+    display: block;
+    margin: 0 auto;
+  }
+  
+  
+  
+  
+  
