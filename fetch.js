@@ -1,4 +1,4 @@
-fetch ('https://opendata.paris.fr/api/records/1.0/search/?dataset=que-faire-a-paris-&q=&facet=date_start&facet=date_end&facet=tags&facet=address_name&facet=address_zipcode&facet=address_city&facet=pmr&facet=blind&facet=deaf&facet=transport&facet=price_type&facet=access_type&facet=updated_at&facet=programs') 
+fetch ('https://opendata.paris.fr/api/records/1.0/search/?dataset=que-faire-a-paris-&q=&facet=date_start&facet=date_end&facet=tags&facet=address_name&facet=address_zipcode&facet=address_city&facet=pmr&facet=blind&facet=deaf&facet=transport&facet=price_type&facet=access_type&facet=updated_at&facet=programs&refine.tags=Th%C3%A9%C3%A2tre') 
 .then(function(response) {
     return response.json();
 })
@@ -11,6 +11,7 @@ fetch ('https://opendata.paris.fr/api/records/1.0/search/?dataset=que-faire-a-pa
     // let URL = "https://www.paris.fr/evenements/journee-internationale-de-lutte-contre-les-violences-faites-aux-femmes-27631"
     // document.getElementById("Journée internationale").innerHTML = test.link(URL);
     console.log(data); 
+   
     //console.log(records[0].fields.address_name)
 
 
