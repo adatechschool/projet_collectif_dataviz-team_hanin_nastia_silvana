@@ -13,10 +13,10 @@ html {
     letter-spacing: 1px;
   }
   html { /* Changer la couleur de la page */
-    background-color: #515253;
+    background-color: #edf0f7;
   }
 body { /* Mettre en forme le corps de page */
-  width: 900px;
+  width: 700px;
   margin: 0 auto;
   background-color: #0e0f0f;
   padding: 0 20px 20px 20px;
