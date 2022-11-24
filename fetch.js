@@ -36,32 +36,35 @@ function append(parent, el) {
 // img.src = "Pic2.jpeg";
 
 // document.getElementById("pic_spectacle").appendChild(img);
-let slideIndex = 1;
-showSlides(slideIndex);
+
+let slideIndex = 0;
+showSlides(slideIndex);  
 
 // Next/previous controls
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+showSlides(slideIndex += n);
 }
-// Thumbnail image controls
+//Thumbnail image controls
 function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-  
-  function showSlides(n) {
-    let i;
+  showSlides(slideIndex = n);
+}
+function showSlides() {
+    let i;
     let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("demo");
-    let captionText = document.getElementById("caption");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
+    let dots = document.getElementsByClassName("dot");
     for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
     }
+
     for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
-    captionText.innerHTML = dots[slideIndex-1].alt;
+    setTimeout(showSlides, 5000); // Change image every 5 seconds
   } 
+
+
+  
