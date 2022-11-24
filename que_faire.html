@@ -51,8 +51,13 @@
 <!-- Image text -->
 <div class="caption-container">
     <p id="caption"></p>
-    <div id="mySlides"></div>
-    <div id="demo"></div>
+  <!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+  
     <!-- Thumbnail images -->
   <div class="row">
     <div class="column">
@@ -64,6 +69,7 @@
     <div class="column">
       <img class="demo cursor" src="Pic3.jpg" style="width:40%" onclick="currentSlide(3)" alt="Sherlock Holmes">
     </div>
+    
 
  <script src="fetch.js"></script>  
 
