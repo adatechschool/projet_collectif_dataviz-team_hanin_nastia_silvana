@@ -1,59 +1,73 @@
 html {
-    font-size: 15px; /* px signifie 'pixels': la taille de base pour la police est désormais 10 pixels de haut  */
-    font-family: 'Open Sans', sans-serif; /* cela devrait être le reste du résultat obtenu à partir de Google fonts */
-  }
-  h1 {
-    font-size: 35px;
-    text-align: center;
-  }
-  
-  p, li {
-    font-size: 14px;
-    line-height: 2;
-    letter-spacing: 1px;
-  }
-  html { /* Changer la couleur de la page */
-    background-color: #edf0f7;
-  }
-body { /* Mettre en forme le corps de page */
-  width: 1000px;
-  margin: 0 auto;
-  background-color: #0e0f0f;
-  padding: 0 20px 20px 20px;
-  
+  font-size: 15px;
+  /* px signifie 'pixels': la taille de base pour la police est désormais 10 pixels de haut  */
+  font-family: 'Open Sans', sans-serif;
+  /* cela devrait être le reste du résultat obtenu à partir de Google fonts */
 }
-h1 { /* Positionner le titre et le mettre en forme*/ 
-    margin: 0;
-    padding: 20px 0;
-    color: #fdfafa;
-   
-  }
-  
-  img { /* Centrer l'image */ 
-    display: block;
-    margin: 0 auto;
-  }
 
-  /* Image gallery*/ 
-  * {
-    box-sizing: border-box;
-  }
-  /* Position the image container (needed to position the left and right arrows) */
+p,
+li {
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 1px;
+}
+
+html {
+  /* Changer la couleur de la page */
+  background-color: #edf0f7;
+}
+
+body {
+  /* Mettre en forme le corps de page */
+  width: 100%;
+  margin: 0 auto;
+  background-color: #c8e3e3;
+  padding: 0 20px 20px 20px;
+
+}
+
+.title {
+  /* Positionner le titre et le mettre en forme*/
+  margin: 0;
+  padding: 20px 0;
+  color: #0c0808;
+  font-size: 35px;
+  text-align: center;
+  font-family: Verdana, sans-serif
+
+}
+
+img {
+  /* Centrer l'image */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Image gallery*/
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
 .container {
   max-width: 1000px;
   position: relative;
   margin: auto;
 }
+
 /* Hide the images by default */
 .mySlides {
   display: none;
 }
+
 /* Add a pointer when hovering over the thumbnail images */
 .cursor {
   cursor: pointer;
 }
+
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 40%;
@@ -63,20 +77,24 @@ h1 { /* Positionner le titre et le mettre en forme*/
   color: rgb(237, 240, 244);
   font-weight: bold;
   font-size: 20px;
-  transition: 0.6s ease; 
+  transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
   -webkit-user-select: none;
 }
+
 /* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
+
 /* On hover, add a ... background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: #515154; 
+.prev:hover,
+.next:hover {
+  background-color: #515154;
 }
+
 /* Caption text */
 .text {
   color: #f2f2f2;
@@ -96,10 +114,11 @@ h1 { /* Positionner le titre et le mettre en forme*/
   position: absolute;
   top: 0;
 }
+
 /* Container for image text */
 .caption-container {
   text-align: center;
-  background-color: rgb(13, 13, 13); 
+  background-color: rgb(13, 13, 13);
   padding: 2px 16px;
   color: white;
 }
@@ -108,12 +127,14 @@ h1 { /* Positionner le titre et le mettre en forme*/
   content: "";
   display: table;
   clear: both;
-} 
+}
+
 /* 3 columns side by side */
 .column {
   float: left;
   width: 33%;
 }
+
 /* Add a transparency effect for thumnbail images */
 .demo {
   opacity: 0.6;
@@ -123,6 +144,7 @@ h1 { /* Positionner le titre et le mettre en forme*/
 .demo:hover {
   opacity: 1;
 }
+
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
@@ -135,7 +157,8 @@ h1 { /* Positionner le titre et le mettre en forme*/
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #817f7f;
 }
 
@@ -146,64 +169,192 @@ h1 { /* Positionner le titre et le mettre en forme*/
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
 }
 
 /* barre de recherche*/
 #search {
   display: inline;
-  width:208px;
-  height:24px;
-  background:#F5F2F0;
-  box-shadow:1px 1px 2px rgba(245, 241, 241, 0.3) inset
+  width: 208px;
+  height: 24px;
+  background: #F5F2F0;
+  box-shadow: 1px 1px 2px rgba(245, 241, 241, 0.3) inset
 }
 
 /*#calendrier {
   display: inline;
-}*/ 
+}*/
 
 
-/* Fond du gadget de la barre de recherche */ 
-  
-  #search .btn-left-loupe {
-  display:block;
+/* Fond du gadget de la barre de recherche */
+
+#search .btn-left-loupe {
+  display: block;
   background: no-repeat 0 0;
-  width:24px;
-  height:24px;
-  float:left;
-  margin:0
-  }
-  
-  #search .btn-right-fleche {
-  display:block;
-  background: no-repeat 0 0;
-  width:24px;
-  height:24px;
-  float:left;
-  margin:6px 0 0
-  }
-  
-  #search input {
-  outline:0;
-  border:0
-  }
-  
-  #search input[type=text] {
-  display:block;
-  font:300 12px HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  background:none;
-  text-shadow:0 1px white;
-  float:left;
-  height:24px;
-  width:160px;
-  line-height:25px;
-  color:white; 
-  margin:0
-  }
+  width: 24px;
+  height: 24px;
+  float: left;
+  margin: 0
+}
 
-  
-  
-  
-  
-  
+#search .btn-right-fleche {
+  display: block;
+  background: no-repeat 0 0;
+  width: 24px;
+  height: 24px;
+  float: left;
+  margin: 6px 0 0
+}
+
+#search input {
+  outline: 0;
+  border: 0
+}
+
+#search input[type=text] {
+  display: block;
+  font: 300 12px HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  background: none;
+  text-shadow: 0 1px white;
+  float: left;
+  height: 24px;
+  width: 160px;
+  line-height: 25px;
+  color: white;
+  margin: 0
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+  margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.widget {
+	height: 300px;
+	width: 450px;
+	position: relative;
+  left: 25%;
+	top: 50%;
+	transform: translate(-50%, 10%);
+}
+
+.weatherData {
+	background-color: #2e3336;
+  position: absolute;
+    left:0;
+    bottom:0;
+	height: 30%;
+	width: 100%;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.temperature {
+	color: #c5cdcf;
+	font-family: 'Open Sans';
+  font-weight: 200;
+	font-size: 2.9375em;
+	line-height: 2.9375em;
+  position: static;
+	left: 6%;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+.rain {
+	color: #8f9b9d;
+	font-family: 'Open Sans';
+  font-weight: 200;
+	font-size: 1.1875em;
+	line-height: 1.1875em;
+  position: absolute;
+	top: 10%;
+	left: 33%;
+}
+.city {
+  color: #c5cdcf;
+	font-family: 'Open Sans';
+  font-weight: 400;
+	font-size: 1.5em;
+	line-height: 0.8125em;
+	position: absolute;
+	bottom: -9%;
+	left: 33%;
+}
+
+.date {
+	background-color: #4dbde2;
+	height: 100%;
+	width: 22%;
+  position: absolute;
+    right:0;
+  bottom: 0;;
+	border-bottom-right-radius: 10px;
+}
+
+.description {
+	color: #fff;
+	font-family: 'Open Sans';
+  font-weight: 700;
+	text-transform: uppercase;
+	font-size: 1em;
+	line-height: 0.6875em;
+  position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
