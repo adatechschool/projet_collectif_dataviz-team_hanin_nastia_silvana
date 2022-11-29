@@ -37,7 +37,7 @@ fetch(myUrl)
     .then(response => response.json())
     .then(data => {
         const $card = jQuery('.mycontainer .event');
-        for (let i = 0; i < 6; i++) {
+        for (let i = 0; i < 3; i++) {
             $card
                 .append(`
                 <div class="column" style ="float:left; padding: 0 10px; width:33%">

@@ -8,7 +8,7 @@ html {
 /* noms des spectacles */
 p,
 li {
-  font-size: 12px;
+  font-size: 10px;
   line-height: 2;
   letter-spacing: 1px;
 }
@@ -23,7 +23,7 @@ body {
   width: 100%;
   margin: 0 auto;
   background-color: #0f0d0d;
-  padding: 0 30px 20px 20px;
+  padding: 0 40px 20px 20px;
   /* top right bottom left ;*/
 
 }
@@ -235,7 +235,7 @@ body {
   font-family: Verdana, sans-serif;
 }
 
-/* Float four columns side by side */
+/* Float four columns side by side 
 .column {
   float: left;
   width: 50%;
@@ -258,7 +258,7 @@ body {
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   /* this adds the "card" effect */
-  padding: 16px;
+  padding: 20px;
   text-align: center;
   background-color: #f1f1f1;
 }
@@ -356,4 +356,19 @@ body {
     'wght' 400,
     'GRAD' 0,
     'opsz' 48
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 700px;
+  grid-auto-rows: minmax(200px, auto);
+}
+.calendrier {
+  grid-column: 1 / 2;
+  grid-row: 1;
+}
+.video {
+  grid-column: 2 / 2;
+  grid-row: 1;
 }
