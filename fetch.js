@@ -91,9 +91,10 @@ function showSlides() {
    });
 window.onload = () => {
     const searchFieldElement = document.getElementById("searchFields")
-    searchFieldElement.onkeyup = (event) => {        if (searchFieldElement.value.trim().length === 0){
+    searchFieldElement.onkeyup = (event) => {        
+  if (searchFieldElement.value.trim().length === 0){
             return;
-        }        searchEvents(searchFieldElement.value)
+}        searchEvents(searchFieldElement.value)
     };
 }
 
