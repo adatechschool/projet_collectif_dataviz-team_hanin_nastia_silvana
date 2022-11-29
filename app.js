@@ -58,20 +58,25 @@ fetch(myUrl)
 // fetching the weather
 meteoUrl = "https://api.open-meteo.com/v1/forecast?latitude=48.85&longitude=2.35&daily=temperature_2m_max,rain_sum,snowfall_sum&current_weather=true&timezone=Europe%2FBerlin"
 fetch(meteoUrl)
-    .then(response => response.json())
-    .then(jsonResp => {
-        //current day description
-        let d= new Date(jsonResp.daily.time[0]).toLocaleDateString("fr")
-        const $weather = jQuery('.weatherData');
-        $weather
-            .append(
-                `<h1 class="temperature"> ${jsonResp.current_weather.temperature}&deg C</h1>
-                <h2 class="rain">Rain ${jsonResp.daily.rain_sum[0]} mm</h2>
-                <h3 class="city">Paris</h3>
-                <div class="date">
-                    <h4 class="description">${d}</h4>
-                </div>`
-            )
+    .then(response => response.json())
+    .then(jsonResp => {
+        //current day description
+        let d= new Date(jsonResp.daily.time[0]).toDateString()
+        console.log(d)
+        const dArr = d.split(" ")
+        let mymonth = dArr[1]
+        let myday= dArr[2]
+        const $weather = jQuery('.weatherData');
+        $weather
+            .append(
+                `<h1 class="temperature"> ${jsonResp.current_weather.temperature}&deg C</h1>
+                <h2 class="rain">Rain ${jsonResp.daily.rain_sum[0]} mm</h2>
+                <h3 class="city">Paris</h3>
+                <div class="date">
+                    <h4 class="description"> ${myday} <br><br> ${mymonth}</h4>
+                </div>`
+            )
+        })
 
         /*  let currentTemp = jsonResp.current_weather.temperature;
          let dayCurRain = jsonResp.daily.rain_sum[0];
@@ -89,7 +94,7 @@ fetch(meteoUrl)
 
         console.log(jsonResp)
 
-    })
+
 
     // background colour change
 
