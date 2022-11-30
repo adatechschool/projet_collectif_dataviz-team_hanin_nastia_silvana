@@ -109,40 +109,40 @@ $("div").click(function () {
 function searchEvents(data) {
     const capitalized = data.charAt(0).toUpperCase() + data.slice(1);
     //const start= date_start
-    const url =`https://opendata.paris.fr/api/records/1.0/search/?dataset=que-faire-a-paris-&q=&facet=date_start&facet=date_end&facet=date
-    _start&facet=address_name&facet=address_zipcode&facet=address_city&facet=pmr&facet=blind&facet=deaf&facet=transport&facet=price_type&facet=access_type&facet=updated_at&facet=programs&refine.tags=${ capitalized }`
+    const url = `https://opendata.paris.fr/api/records/1.0/search/?dataset=que-faire-a-paris-&q=&facet=date_start&facet=date_end&facet=date
+    _start&facet=address_name&facet=address_zipcode&facet=address_city&facet=pmr&facet=blind&facet=deaf&facet=transport&facet=price_type&facet=access_type&facet=updated_at&facet=programs&refine.tags=${capitalized}`
 
     fetch(url)
-            .then((response) => response.json())
-            .then(jsonData => {
-                console.log(jsonData)
-                let results = jsonData.records.map(element => element.fields.title);
-                console.log(results);
-                renderResults(results)
-                document.getElementById("errorMessage").innerHTML = "";
-            })
-            .catch((error) => {
-                document.getElementById("errorMessage").innerHTML = error;
-                renderResults([]);
-            });
+        .then((response) => response.json())
+        .then(jsonData => {
+            console.log(jsonData)
+            let results = jsonData.records.map(element => element.fields.title);
+            console.log(results);
+            renderResults(results)
+            document.getElementById("errorMessage").innerHTML = "";
+        })
+        .catch((error) => {
+            document.getElementById("errorMessage").innerHTML = error;
+            renderResults([]);
+        });
+}
+//searchEvents("atelier")
+
+function renderResults(myResults) {
+    const list = document.getElementById("resultsList")
+    list.innerHTML = "";
+    myResults.map(result => {
+        let element = document.createElement("li")
+        element.innerText = result;
+        list.appendChild(element);
+    });
+} window.onload = () => {
+    const searchBarElement = document.getElementById("searchBar")
+    console.log(searchBarElement)
+    searchBarElement.onkeyup = (event) => {
+        if (searchBarElement.value.trim().length === 0) {
+            return;
+        }
+        searchEvents(searchBarElement.value)
     }
-    //searchEvents("atelier")
-    
-    function renderResults(myResults) {
-        const list = document.getElementById("resultsList")
-        list.innerHTML = "";
-        myResults.map(result => {
-            let element = document.createElement("li")
-            element.innerText = result;
-            list.appendChild(element);
-        });
-    }window.onload = () => {
-        const searchBarElement = document.getElementById("searchBar")
-        console.log(searchBarElement)
-        searchBarElement.onkeyup = (event) => {
-            if (searchBarElement.value.trim().length === 0) {
-                return;
-            }
-            searchEvents(searchBarElement.value)
-        }
-    };
+};
