@@ -8,17 +8,22 @@ fetch(url)
         // data.records -> array of events, data.records[0].fields.cover_url
 
         const $slider = jQuery('.splide .splide__list');
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < 10; i++) {
             $slider
                 .append(`<li class="splide__slide">
             <a href= ${data.records[i].fields.access_link} >
-                <img src="${data.records[i].fields.cover_url}" style="width:70%;"/></a>
-                <p style = "background-color: aliceblue; text-align:center"> ${data.records[i].fields.title}</p>
+                <img class="carousel" src="${data.records[i].fields.cover_url}"/></a>
+                <p style = "background-color: noir; text-align:center"> ${data.records[i].fields.title}</p>
           </li>`);
         }
+        var splide = new Splide('.splide', {
+            type: 'loop',
+            perPage: 1,
+            autoplay: true,
+        });
 
-        const splide = new Splide('.splide');
         splide.mount();
+
     });
 
 // filtering fetch with recents events
@@ -32,13 +37,13 @@ fetch(myUrl)
             $card
                 .append(`
                 <div class="column" style ="float:left; padding: 0 10px; width:33%">
-                        <div class="card" style="padding:16px; text-align:center; backgroung-color: white">
+                        <div class="card" style="padding:16px; text-align:center; backgroung-color:#2E3336">
                             <a href=${data.records[i].fields.access_link}>
                              <img src="${data.records[i].fields.cover_url}" style="width:70%;"/>
                             </a>
                             <div class="container">
                              <h3 id="event_Title">${data.records[i].fields.title}</h3>
-                             <p id="event_place">${data.records[i].fields.address_name}></p>
+                             <p id="event_place">${data.records[i].fields.address_name}</p>
                         </div>
                 </div>`)
 
